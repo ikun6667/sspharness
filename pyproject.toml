@@ -1,0 +1,31 @@
+[project]
+name = "langgraph-harness"
+version = "0.1.0"
+description = "A plugin-based coding agent harness built on LangGraph"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain-core>=0.3.0",
+    "langchain-anthropic>=0.3.0",
+    "langchain-openai>=0.3.0",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+ui = [
+    "streamlit>=1.33",
+]
+mcp = [
+    "mcp>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
